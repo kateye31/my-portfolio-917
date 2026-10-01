@@ -1,32 +1,10 @@
 import Favs from "../components/Favs";
 import Hero from "../components/Hero";
+import Nav from "../components/Nav";
 import Projects from "../components/Projects";
 import Reveal from "../components/Reveal";
 import { Acorn, CurlyArrow, Flower, Heart, Icon, Leaf, RoughFilter, SootSprite, Sparkle, Squiggle, Star, Tape } from "../components/Doodles";
 import { education, experience, links, orgs, RESUME, skills } from "../data/content";
-
-const navLinks = [
-  ["#hobbies", "my_favs"],
-  ["#work", "work"],
-  ["#experience", "experience"],
-  ["#organizations", "organizations"],
-  ["#skills", "skills"],
-  ["#education", "education"],
-  ["#contact", "contact"],
-];
-
-function Nav() {
-  return (
-    <nav className="nav">
-      <a href="#top" className="brand">katrina<span>✿</span></a>
-      <ul>
-        <li><a href={RESUME} target="_blank" rel="noopener" className="nav-resume">resume</a></li>
-        <li className="nav-sep" aria-hidden="true">·</li>
-        {navLinks.map(([href, label]) => <li key={href}><a href={href}>{label}</a></li>)}
-      </ul>
-    </nav>
-  );
-}
 
 function Label({ children }) {
   return <p className="label note">{children}</p>;
