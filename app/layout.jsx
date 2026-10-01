@@ -1,0 +1,27 @@
+import "./globals.css";
+
+// plain Google Fonts stylesheet (next/font/google breaks under Turbopack dev here)
+const FONTS =
+  "https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@300..800&family=Yomogi&display=swap";
+
+export const metadata = {
+  title: "katrinaadewale.dev",
+  description: "Katrina Adewale - software engineer, STEM advocate, creator and cat-lover.",
+};
+
+export const viewport = { themeColor: "#fbf5e8" };
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="stylesheet" href={FONTS} />
+        {/* hide reveal-on-scroll content only when JS is running, before first paint */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
