@@ -41,6 +41,9 @@
   nav ul{list-style:none; display:flex; gap:26px;}
   nav a{font-size:.85rem; color:var(--text-dim); font-family:'JetBrains Mono', monospace; transition:.25s;}
   nav a:hover{color:var(--mint);}
+  nav a.nav-resume{font-family:'Space Grotesk', sans-serif; font-weight:600; color:var(--pink);}
+  nav a.nav-resume:hover{color:var(--lav);}
+  nav .nav-sep{color:var(--text-dim); font-family:'JetBrains Mono', monospace;}
 
   header.hero{
     position:relative; z-index:2;

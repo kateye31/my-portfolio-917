@@ -311,10 +311,6 @@ wireSimpleModal('marqueeBtn', 'musicalsModalOverlay', 'musicalsModalClose');
 wireSimpleModal('globeBtn', 'globeModalOverlay', 'globeModalClose');
 wireSimpleModal('booksBtn', 'booksModalOverlay', 'booksModalClose');
 
-const resumeBtn = document.getElementById('resumeBtn');
-if(resumeBtn) resumeBtn.addEventListener('click', (e)=> e.preventDefault());
-wireSimpleModal('resumeBtn', 'resumeModalOverlay', 'resumeModalClose');
-
 
 // broadway sign lights up on hover
 const marqueeBtn = document.getElementById('marqueeBtn');
