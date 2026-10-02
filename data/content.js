@@ -295,3 +295,12 @@ export const favs = [
 ];
 
 export const heroPhoto = { src: `${IMG}/katrina-holding-a-capuchin-monkey-in-fro.jpg`, alt: "Katrina holding a capuchin monkey in front of a pink building" };
+
+// Analytics. Leave a value empty to turn that service off.
+//  - umamiWebsiteId: from cloud.umami.is > Settings > Websites > your site > Edit (the "Website ID")
+//  - goatcounterCode: the name you picked at goatcounter.com (the "xyz" in xyz.goatcounter.com)
+export const analytics = {
+  umamiWebsiteId: "",
+  goatcounterCode: "",
+  domain: "katrinaadewale.dev", // only visits on the live site are counted, not localhost
+};

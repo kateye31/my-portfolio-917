@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Nav from "../components/Nav";
 import Projects from "../components/Projects";
 import Reveal from "../components/Reveal";
+import VisitCounter from "../components/VisitCounter";
 import { Acorn, CurlyArrow, Flower, Heart, Icon, Leaf, RoughFilter, SootSprite, Sparkle, Squiggle, Star, Tape } from "../components/Doodles";
 import { education, experience, links, orgs, RESUME, skills } from "../data/content";
 
@@ -16,7 +17,7 @@ function Experience() {
       <h3 className="group-title" data-reveal>{g.group} <span className="note">- {g.note}</span></h3>
       <div className="exp-grid">
         {g.items.map((e, i) => (
-          <article key={e.title + e.date} className="exp-card paper-card" data-reveal style={{ "--tilt": `${[-1, 0.8, -0.4, 1.2][i % 4]}deg` }}>
+          <article key={`${e.org}-${e.title}-${e.date}`} className="exp-card paper-card" data-reveal style={{ "--tilt": `${[-1, 0.8, -0.4, 1.2][i % 4]}deg` }}>
             <div className={`exp-img ${e.logo ? "logo" : ""}`} style={e.logoBg ? { background: e.logoBg } : undefined}>
               <Tape />
               <img src={e.img} alt={e.org} loading="lazy" />
@@ -147,6 +148,7 @@ export default function Home() {
           <Sparkle className="twinkle" style={{ width: 22 }} />
           <SootSprite className="hop delay" style={{ width: 28 }} />
         </div>
+        <VisitCounter />
         <p className="note tiny">drawn &amp; coded with love · forest spirit is fan art</p>
       </footer>
     </>

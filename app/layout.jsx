@@ -1,3 +1,5 @@
+import Script from "next/script";
+import { analytics } from "../data/content";
 import "./globals.css";
 
 // plain Google Fonts stylesheet (next/font/google breaks under Turbopack dev here)
@@ -21,7 +23,17 @@ export default function RootLayout({ children }) {
         {/* hide reveal-on-scroll content only when JS is running, before first paint */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {analytics.umamiWebsiteId && (
+          <Script src="https://cloud.umami.is/script.js" strategy="afterInteractive"
+            data-website-id={analytics.umamiWebsiteId} data-domains={analytics.domain} />
+        )}
+        {analytics.goatcounterCode && (
+          <Script src="https://gc.zgo.at/count.js" strategy="afterInteractive"
+            data-goatcounter={`https://${analytics.goatcounterCode}.goatcounter.com/count`} />
+        )}
+      </body>
     </html>
   );
 }
