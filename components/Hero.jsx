@@ -33,7 +33,7 @@ export default function Hero() {
 
   return (
     <header className="hero" id="top">
-      <Cloud className="float slow" style={{ position: "absolute", top: 90, left: "4%", width: 130 }} />
+      <Cloud className="float slow" style={{ position: "absolute", top: 78, left: "30%", width: 120 }} />
       <Cloud className="float" style={{ position: "absolute", top: 150, right: "6%", width: 100 }} />
       <Sparkle className="twinkle" style={{ position: "absolute", top: 120, left: "46%", width: 26 }} />
 

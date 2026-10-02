@@ -2,7 +2,7 @@ import "./globals.css";
 
 // plain Google Fonts stylesheet (next/font/google breaks under Turbopack dev here)
 const FONTS =
-  "https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@300..800&family=Yomogi&display=swap";
+  "https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Kiwi+Maru:wght@300;400;500&family=Hachi+Maru+Pop&display=swap";
 
 export const metadata = {
   title: "katrinaadewale.dev",

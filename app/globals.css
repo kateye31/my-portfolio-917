@@ -1,7 +1,7 @@
 :root {
-  --font-display: "Darumadrop One";
-  --font-body: "Shantell Sans";
-  --font-hand: "Yomogi";
+  --font-display: "Mochiy Pop One";
+  --font-body: "Kiwi Maru";
+  --font-hand: "Hachi Maru Pop";
   --paper: #fbf5e8;
   --paper-2: #fffdf7;
   --ink: #2b2724;
@@ -225,7 +225,7 @@ html.js [data-reveal].in-view { opacity: 1; transform: none; }
 .hello {
   position: relative; display: inline-block;
   font-family: var(--font-display), cursive; font-weight: 400;
-  font-size: clamp(3rem, 9vw, 5.6rem); line-height: 1;
+  font-size: clamp(2.5rem, 8.4vw, 3.8rem); white-space: nowrap; line-height: 1;
   min-height: 1em;
 }
 .caret { color: var(--pink-deep); animation: blink 0.7s steps(1) infinite; }
@@ -387,12 +387,7 @@ footer { text-align: center; padding-bottom: 50px; }
 .cover img { aspect-ratio: 1; object-fit: cover; width: 100%; }
 
 /* ---------- responsive ---------- */
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; padding-top: 100px; }
-  .hero-art { height: 440px; }
-  .hero-photo { width: 130px; right: 0; }
-  .edu-grid { grid-template-columns: 1fr; }
-  .favs-arrow, .favs-hint { display: none; }
+@media (max-width: 1180px) {
   /* compact bar + dropdown menu */
   .nav { padding: 10px 16px; }
   .nav .brand { font-size: 1.5rem; }
@@ -424,6 +419,13 @@ footer { text-align: center; padding-bottom: 50px; }
   .nav-links a::after { display: none; }
   .nav-links a:active { background: var(--mint); }
   html { scroll-padding-top: 80px; }
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: 100px; }
+  .hero-art { height: 440px; }
+  .hero-photo { width: 130px; right: 0; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .favs-arrow, .favs-hint { display: none; }
 }
 @media (max-width: 520px) {
   .hero > .float { display: none; }
