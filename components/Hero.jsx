@@ -7,7 +7,7 @@ import { Circled, Cloud, CurlyArrow, Leaf, SootSprite, Sparkle, Squiggle, Star, 
 
 const SpiritScene = dynamic(() => import("./SpiritScene"), {
   ssr: false,
-  loading: () => <div className="scene-loading note">waking up the forest spirit…</div>,
+  loading: () => <div className="scene-loading note">summoning a spirit…</div>,
 });
 
 const GREETING = "hi, i'm katrina";

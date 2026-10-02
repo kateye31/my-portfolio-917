@@ -149,7 +149,7 @@ export default function Home() {
           <SootSprite className="hop delay" style={{ width: 28 }} />
         </div>
         <VisitCounter />
-        <p className="note tiny">drawn &amp; coded with love · forest spirit is fan art</p>
+        <p className="note tiny">drawn &amp; coded with love · no-face is spirited away fan art</p>
       </footer>
     </>
   );
