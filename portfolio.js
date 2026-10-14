@@ -1,3 +1,29 @@
+// Navigation works independently of the animation CDN.
+(() => {
+  const nav = document.querySelector('.site-nav');
+  const toggle = nav.querySelector('.nav-toggle');
+  const links = document.getElementById('navLinks');
+  const mobile = matchMedia('(max-width: 1100px)');
+  toggle.hidden = false;
+  nav.classList.add('nav-ready');
+  function setOpen(open, restoreFocus = false) {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.querySelector('span').textContent = open ? 'Close' : 'Menu';
+    nav.classList.toggle('is-open', open);
+    if (restoreFocus) toggle.focus();
+  }
+  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  links.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', event => { if (!nav.contains(event.target)) setOpen(false); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) setOpen(false, true);
+  });
+  nav.addEventListener('focusout', () => {
+    setTimeout(() => { if (!nav.contains(document.activeElement)) setOpen(false); }, 0);
+  });
+  mobile.addEventListener('change', () => setOpen(false));
+})();
+
 gsap.registerPlugin(ScrollTrigger);
 
 // pick a random cat photo for the profile picture

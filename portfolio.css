@@ -559,3 +559,18 @@
   .book-tooltip strong{ display:block; font-size:.82rem; color:var(--text); margin-bottom:3px; }
   .book-tooltip span{ font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--text-dim); }
   .book-item:hover .book-tooltip{ opacity:1; }
+
+/* Mobile navigation */
+html { scroll-padding-top:86px; }
+.nav-toggle { display:none; }
+@media (max-width:900px) {
+  nav.site-nav { padding:14px 6vw; flex-wrap:wrap; gap:0; }
+  .site-nav .brand { color:var(--text); }
+  .nav-ready .nav-toggle { display:flex; align-items:center; gap:8px; margin-left:auto; min-height:44px; padding:0 13px; border:1px solid rgba(185,164,255,.3); border-radius:9px; background:var(--panel); color:var(--text); font:inherit; font-size:.82rem; cursor:pointer; }
+  .site-nav ul { width:100%; display:grid; grid-template-columns:1fr 1fr; gap:6px; padding-top:14px; }
+  .nav-ready ul { display:none; }
+  .nav-ready.is-open ul { display:grid; }
+  .site-nav ul a { display:flex; align-items:center; min-height:46px; padding:10px 12px; border-radius:8px; background:var(--panel); font-size:.82rem; }
+  .site-nav .nav-sep { display:none; }
+}
+@media (max-width:420px) { .site-nav ul { grid-template-columns:1fr; } }

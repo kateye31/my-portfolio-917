@@ -17,9 +17,10 @@
 <div class="glow" style="width:420px; height:420px; background:var(--mint); opacity:.14; top:40%; right:-120px;"></div>
 <div class="glow" style="width:380px; height:380px; background:var(--lav); opacity:.15; bottom:-100px; left:20%;"></div>
 
-<nav>
-  <div class="brand">katrinaadewale<span class="dot">.dev</span></div>
-  <ul>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="brand" href="#home" aria-label="Katrina Adewale home">katrinaadewale<span class="dot">.dev</span></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" hidden><span>Menu</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <ul id="navLinks">
     <li><a href="images/extracted/katrina-adewale-resume.pdf" target="_blank" rel="noopener" class="nav-resume">resume</a></li>
     <li class="nav-sep">·</li>
     <li><a href="#hobbies">my_favs</a></li>
@@ -32,7 +33,7 @@
   </ul>
 </nav>
 
-<header class="hero">
+<header class="hero" id="home">
   <div class="quote-btn-wrap">
     <button class="quote-btn" id="quoteBtn" type="button" aria-label="See a favorite quote">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 15c-2 0-3-1.5-3-3.5S5 8 7 8s3 1.5 3 3.5c0 3-2 5.5-5 6.5M17 15c-2 0-3-1.5-3-3.5S15 8 17 8s3 1.5 3 3.5c0 3-2 5.5-5 6.5"/></svg>
